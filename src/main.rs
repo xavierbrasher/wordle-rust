@@ -91,7 +91,7 @@ fn get_colors(word: &String, guess: &String) -> String {
         let mut index_word = word.chars();
         let mut index_guess = guess.chars();
         let mut tmp = String::new();
-        for i in 0..5 {
+        for _i in 0..5 {
             let word_with_new_index = index_word.nth(0);
             let guess_with_new_index = index_guess.nth(0);
             if guess_with_new_index == word_with_new_index {
@@ -110,7 +110,7 @@ fn game() {
     let word: String = get_a_random_item(words);
     println!("{}", word);
 
-    let mut responce = get_colors(&word, &"EMPTYGUESS".to_string());
+    let responce = get_colors(&word, &"EMPTYGUESS".to_string());
     let mut guesses = 6;
     while guesses > 0 {
         println!("{:?} guess left", guesses);
